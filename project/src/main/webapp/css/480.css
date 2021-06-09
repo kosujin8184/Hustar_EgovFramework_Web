@@ -1,0 +1,312 @@
+.header h1 a img {
+    max-width: 140px;
+    max-height: 50px;
+}
+
+.header .gnb {
+    width: 100%;
+    clear: both;
+	margin-top:80px;
+	margin-bottom:10px;
+}
+
+.header .gnb > ul > li {
+    margin: 0 0;
+    width: 25%;
+}
+
+
+.header .gnb > ul > li > a {
+    font-size: 17px;
+    text-align: center;
+}
+
+.header h1 a {
+    padding: 0px;
+}
+
+.header .tnb > ul > li > a {
+    font-size: 12px;
+}
+
+.header .tnb {
+    margin-top: 0px;
+}
+
+.main-visual h2 {
+    font-size: 20px;
+    padding-top: 60px;
+}
+.main-visual p {
+    font-size: 13px;
+}
+
+
+.main-visual {
+    height: 220px;
+}
+
+
+.numbers-wrap {
+    margin-top: 30px;
+}
+
+.numbers-wrap h2 {
+    font-size: 21px;
+    padding-top: 30px;
+}
+
+.numbers-wrap p {
+    font-size: 16px;
+	margin-bottom:14px;
+}
+
+.numbers-wrap .numbers img {
+    max-height: 35px;
+}
+
+.num-data li {
+    padding: 0;
+    margin: 0 10px;
+    width: 43%;
+}
+
+.num-data ul li p {
+    font-size: 20px;
+}
+
+.num-data ul li span {
+    font-size: 13px;
+}
+
+
+.main-gallery-wrap {
+    margin-top: 40px;
+}
+
+.main-gallery li {
+    width: 100%;
+}
+
+
+.m-g-box h2 {
+    font-size: 30px;
+}
+
+
+.footer {
+    margin-top: 70px;
+}
+
+.footer > div {
+    margin: 0 auto;
+}
+
+
+.notice-box {
+    padding: 8px;
+}
+
+.main-gallery li > div .info h3 {
+	font-size: 14px;
+}
+
+.main-gallery li > div .info p {
+	font-size: 10px;
+}
+
+
+.table-list ul li > div.no {
+    width: 15%;
+}
+
+.table-list ul li > div.subject {
+    width: 40%;
+}
+
+.table-list ul li > div.name {
+    width: 20%;
+}
+
+.table-list ul li > div.date {
+    width: 25%;
+}
+
+.table-btn > div a {
+    padding: 5px 9px;
+}
+
+.gallery ul li {
+    width: 100%;
+}
+
+.gallery ul li:nth-child(3n+1) {
+    clear: unset;
+}
+
+.booking-box ul h2 {
+    padding: 20px 0;
+    font-size: 27px;
+}
+
+.booking-wrap .table-hd > div {
+    margin: 0px 12px;
+}
+
+.booking-wrap ul li .booking-box > div.info h3 {
+    font-size: 20px;
+}
+
+.booking-wrap ul li .booking-box > div.info p {
+    font-size: 12px;
+}
+
+
+.booking-wrap ul li .booking-box > div.thum {
+    width: 100%;
+}
+
+.booking-wrap ul li .booking-box > div.info {
+    width: 100%;
+}
+
+.booking-wrap ul li {
+    padding: 5px;
+}
+
+
+.booking-box {
+    margin: 10px auto;
+}
+
+.view-cont img {
+    width: 100%;
+}
+
+.booking-box h2 {
+    font-size: 25px;
+}
+
+.table-hd {
+    padding: 0px 10px;
+}
+
+
+.booking-box .calendar-wrap > div {
+    width: 100%;
+    padding: 0px;
+}
+
+
+
+.booking-box .num li.addr span {
+    display: block;
+}
+
+.mypage > h2 {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.table-hd {
+    padding: 15px 8px;
+}
+
+.table-btn > div a {
+    padding: 5px 8px;
+}
+
+.table-list ul li > div.no {
+    width: 13%;
+}
+
+.table-list ul li > div.subject {
+    width: 32%;
+}
+
+.table-list ul li > div.name {
+    width: 17%;
+}
+
+.table-list ul li > div.date {
+    width: 25%;
+}
+
+.footer > div {
+    padding: 0px;
+}
+
+.section00-box h2 {
+    font-size: 30px;
+}
+
+.section00-box p {
+    font-size: 15px;
+}
+
+.section01-box > h2 {
+    font-size: 30px;
+}
+
+.section01-box > h1 {
+    font-size: 15px;
+}
+
+.section01-box > p {
+    font-size: 30px;
+}
+
+
+.section02-box h2 {
+    font-size: 30px;
+}
+
+.section02-box p {
+    font-size: 10px;
+}
+
+.section02-box h1 {
+    font-size: 15px;
+}
+
+.section02-box p img {
+    width: 300px;
+}
+
+.section03-box h2 {
+    font-size: 30px;
+}
+
+.section03-box h1 {
+    font-size: 15px;
+}
+
+.section03-box p img {
+    width: 80px;
+}
+
+.section03-box p {
+    font-size: 15px;
+}
+
+
+.cir > div{width:100px; height:100px;}
+.cir{ margin:0 0px;}
+.circle-box .cir h5{font-size:10px; color:#fff;}
+.circle-box .cir p{font-size:8px; color:#fff;}
+.cir:after{content:''; position: absolute; width: 45px; height: 0px; background: #fff; top:50%; right:-45px;}
+.cir:last-child:after{display: none;}
+
+
+
+.header{position:fixed; width:100%; z-index:9999; top:0; left:0;}
+
+body{padding-top:102px;}
+
+
+.fp-tableCell{padding-top:102px;}
+
+#section0 {
+    background-position: center 102px;
+}

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="testDAO">
+	<!-- 조회 -->
+	<select id="testDAO.selectTestList" parameterType="testVO" resultType="testVO" flushCache="true">
+		<![CDATA[
+			SELECT * FROM T_TEST 
+			WHERE (1)
+			
+		]]>
+		<if test="te_is_hot != null and te_is_hot != ''">
+			<![CDATA[
+			AND TE_IS_HOT = #{te_is_hot}
+			]]>
+		</if>
+
+		<if test="searchKeyword != null and searchKeyword != ''">
+			<if test="searchCondition == 'te_name'">
+				<![CDATA[ 
+				AND TE_NAME LIKE CONCAT('%', #{searchKeyword} , '%')
+				]]>
+			</if>
+			<if test="searchCondition == 'te_content'">
+				<![CDATA[ 
+				AND TE_CONTENT LIKE CONCAT('%', #{searchKeyword} , '%')
+				]]>
+			</if>
+			<if test="searchCondition == 'all'">
+				<![CDATA[ 
+				AND (TE_NAME LIKE CONCAT('%', #{searchKeyword} , '%') OR TE_CONTENT LIKE CONCAT('%', #{searchKeyword} , '%'))
+				]]>
+			</if>
+			
+		</if>
+		
+		
+		
+		<![CDATA[
+			ORDER BY TE_ID DESC
+			LIMIT #{firstIndex}, #{recordCountPerPage}
+		]]>
+	
+	</select>	
+	<!-- //조회 -->
+	
+	<!-- 조회 -->
+	<select id="testDAO.selectTestNoticeList" parameterType="testVO" resultType="testVO" flushCache="true">
+		<![CDATA[
+			SELECT * FROM T_TEST 
+			WHERE (1)
+			AND TE_IS_NOTICE ='1'
+			ORDER BY TE_ID DESC
+		]]>
+	
+	</select>	
+	<!-- //조회 -->
+	
+	<!-- 개수 조회 -->
+	<select id="testDAO.selectTestListTotCnt" parameterType="testVO" resultType="int">
+		<![CDATA[
+		SELECT COUNT(*) AS totcnt FROM T_TEST
+		WHERE (1)
+		]]>
+		<if test="te_is_hot != null and te_is_hot != ''">
+			<![CDATA[
+			AND TE_IS_HOT = #{te_is_hot}
+			]]>
+		</if>
+		<if test="searchKeyword != null and searchKeyword != ''" >
+			<if test="searchCondition == 'te_name'">
+				<![CDATA[ 
+				AND TE_NAME LIKE CONCAT('%', #{searchKeyword} , '%')
+				]]>
+			</if>
+			<if test="searchCondition == 'te_content'">
+				<![CDATA[ 
+				AND TE_CONTENT LIKE CONCAT('%', #{searchKeyword} , '%')
+				]]>
+			</if>
+			<if test="searchCondition == 'all'">
+				<![CDATA[ 
+				AND (TE_NAME LIKE CONCAT('%', #{searchKeyword} , '%') OR TE_CONTENT LIKE CONCAT('%', #{searchKeyword} , '%'))
+				]]>
+			</if>
+			
+		</if>
+		
+	</select>
+	<!-- //개수 조회 -->
+	
+	<!--  상세조회 -->
+	<select id="testDAO.selectTestView" parameterType="testVO" resultType="testVO">
+		<![CDATA[
+			SELECT * FROM T_TEST WHERE te_id = #{te_id}
+		]]>
+	</select>
+	<!--  //상세조회 -->
+	
+	<!-- 등록 -->
+	<insert id="testDAO.insertTest" parameterType="testVO" useGeneratedKeys="true">
+		<![CDATA[
+			INSERT INTO T_TEST SET
+			TE_NAME = #{te_name},
+			TE_NICK = #{te_nick},
+			TE_CONTENT = #{te_content},
+			TE_IS_NOTICE = #{te_is_notice},
+			TE_IS_HOT = #{te_is_hot},
+			INSERT_DATE = NOW()
+		]]>
+	</insert>
+	<!--  //등록 -->
+	
+	<!-- 수정 -->
+	<update id="testDAO.updateTest" parameterType="testVO">
+		<![CDATA[
+			UPDATE T_TEST SET
+			TE_NAME = #{te_name},
+			TE_NICK = #{te_nick},
+			TE_CONTENT = #{te_content},
+			TE_IS_NOTICE = #{te_is_notice},
+			TE_IS_HOT = #{te_is_hot},
+			MODIFY_DATE = NOW()
+			WHERE te_id = #{te_id}
+		]]>
+	</update>
+	<!-- //수정 -->
+	
+	<!-- 삭제 -->
+	<delete id="testDAO.deleteTest" parameterType="testVO">
+		<![CDATA[
+		DELETE FROM T_TEST WHERE TE_ID = #{te_id}
+		]]>
+	</delete>
+	<!-- //삭제 -->
+</mapper>
